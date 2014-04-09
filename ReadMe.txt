@@ -1,4 +1,4 @@
-This project may need some permissions before it's fully functional
+This project may need some permission changes before it's fully functional
 
 Export information issues
 
