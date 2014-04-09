@@ -1,0 +1,31 @@
+﻿<h2>Export Contact</h2>
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            <div ng-repeat="contact in data.contacts.contact">
+                <a href='#/edit/{{ $index }}'>{{contact.first}} {{contact.last}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        You can edit the contact and then export it to a file.
+        <hr />
+        <form novalidate>
+            <label>First Name:</label>
+            <input type="text" name="firstName" ng-model="person.first" value="{{ person.first }}" />
+            <br /><br />
+            <label>Last Name:</label>
+            <input type="text" name="lastName" ng-model="person.last" value="{{ person.last }}" />
+            <br /><br />
+            <label>Date of birth:</label>
+            <input type="text" name="dob" ng-model="person.dob" value="{{ person.dob }}" />
+            <br /><br />
+            <label>Phone number:</label>
+            <input type="text" name="phone" ng-model="person.phone" value="{{ person.phone }}" />
+            <br /><br />
+            <button class="btn btn-primary" ng:click="exportPerson(person)">Export Person</button>
+            <button class="btn btn-primary" ng:click="eventLog(person)">Log Event</button>
+        </form>
+    </div>
+</div>

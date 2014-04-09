@@ -1,0 +1,8 @@
+﻿<h2>Contacts</h2>
+<div>
+    <div>
+        <div ng-repeat="contact in data.contacts.contact">
+            <a href='#/edit/{{ $index }}'>{{contact.first}} {{contact.last}}</a>
+        </div>
+    </div>
+</div>

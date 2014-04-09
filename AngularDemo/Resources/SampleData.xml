@@ -1,0 +1,32 @@
+<contacts>
+  <contact>
+    <first>Robert</first>
+    <last>Smith</last>
+    <dob>1960-03-14</dob>
+    <phone>617-555-1234</phone>
+  </contact>
+  <contact>
+    <first>Kara</first>
+    <last>Montella</last>
+    <dob>1964-12-11</dob>
+    <phone>508-699-9214</phone>
+  </contact>
+  <contact>
+    <first>Joseph</first>
+    <last>Fancescone</last>
+    <dob>1943-08-25</dob>
+    <phone>401-333-2525</phone>
+  </contact>
+  <contact>
+    <first>Kimberly</first>
+    <last>Simon</last>
+    <dob>1978-01-31</dob>
+    <phone>401-751-2212</phone>
+  </contact>
+  <contact>
+    <first>Josephine</first>
+    <last>King</last>
+    <dob>1981-09-02</dob>
+    <phone>978-256-3219</phone>
+  </contact>
+</contacts>
