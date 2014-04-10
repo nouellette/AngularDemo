@@ -39,6 +39,7 @@ namespace AngularDemo.Controllers
         /// </summary>
         /// <param name="timeProvider">Will give access to the DateTime.Now</param>
         /// <param name="fileSystemProvider">Will give access to the file system</param>
+        /// <param name="eventLogger">Will give access to the event logging system</param>
         public ApiController(ITimeProvider timeProvider, IFileSystemProvider fileSystemProvider, IEventLogger eventLogger)
         {
             _timeProvider = timeProvider;
