@@ -6,16 +6,20 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AngularDemo;
 using AngularDemo.Controllers;
+using AngularDemo.Helpers;
 
 namespace AngularDemo.Tests.Controllers
 {
     [TestClass]
     public class ApiControllerTest
     {
+        TimeProvider _timeProvider = new TimeProvider();
+        FileSystemProvider _fileSystemProvider = new FileSystemProvider();
+
         [TestMethod]
         public void ApiController_Result_Is_Not_Empty()
         {
-            ApiController controller = new ApiController();
+            ApiController controller = new ApiController(_timeProvider, _fileSystemProvider);
             JsonResult result = controller.GetData() as JsonResult;
             Assert.IsNotNull(result);
         }

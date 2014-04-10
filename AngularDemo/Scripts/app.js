@@ -45,11 +45,11 @@ var EditController = function ($scope, $http, $routeParams) {
         });
     };
     
-    $scope.eventLog = function (dataToLog) {
+    $scope.eventLog = function (person) {
         $http({
             url: 'api/windowseventlog',
             method: "POST",
-            data: dataToLog
+            data: person
         }).success(function () {
             alert("Your data has been logged!")
         });
