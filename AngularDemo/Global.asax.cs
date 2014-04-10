@@ -11,13 +11,12 @@ namespace AngularDemo
 {
     public class MyAngularDemo : System.Web.HttpApplication
     {
-        Container _container;
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            _container = new Container(new DependencyRegistry());
+            Container _container = new Container(new DependencyRegistry());
             StructureMapDependencyResolver structureMapDependencyResolver = new StructureMapDependencyResolver(_container);
             DependencyResolver.SetResolver(structureMapDependencyResolver);
         }
