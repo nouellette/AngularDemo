@@ -19,6 +19,7 @@ namespace AngularDemo.Configuration
         {
             For<ITimeProvider>().Use<TimeProvider>();
             For<IFileSystemProvider>().Use<FileSystemProvider>();
+            For<IEventLogger>().Use<EventLogger>();
         }
     }
 }

@@ -30,14 +30,20 @@ namespace AngularDemo.Controllers
         private IFileSystemProvider _fileSystemProvider;
 
         /// <summary>
+        /// Container for the event logging system
+        /// </summary>
+        private IEventLogger _eventLogger;
+
+        /// <summary>
         /// Constructor for the main API
         /// </summary>
         /// <param name="timeProvider">Will give access to the DateTime.Now</param>
         /// <param name="fileSystemProvider">Will give access to the file system</param>
-        public ApiController(ITimeProvider timeProvider, IFileSystemProvider fileSystemProvider)
+        public ApiController(ITimeProvider timeProvider, IFileSystemProvider fileSystemProvider, IEventLogger eventLogger)
         {
             _timeProvider = timeProvider;
             _fileSystemProvider = fileSystemProvider;
+            _eventLogger = eventLogger;
         }
 
         /// <summary>
@@ -80,7 +86,7 @@ namespace AngularDemo.Controllers
         public void WindowsEventLog(Person person)
         {
             var message = string.Format("{0} {1} has been logged in the windows application event logs.", person.first, person.last);
-            EventLog.WriteEntry("My Angular Demo App", message, EventLogEntryType.SuccessAudit, 12345);
+            _eventLogger.EventLogging("My Angular Demo App", message, EventLogEntryType.SuccessAudit, 12345);
         }
 	}
 }
